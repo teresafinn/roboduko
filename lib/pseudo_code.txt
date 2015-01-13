@@ -1,0 +1,17 @@
+  #Q: what's the best way to organize my puzzle files? first_puzzle is a row. second_puzzle is a column. third puzzle is a square.
+
+  #I want to accept a puzzle into my program. the puzzle will have 9 elements total with 1 missing element that you want to solve for. the goal is to solve for the missing piece.
+
+  #I want to convert the puzzle_input into an array so I can iterate through the pieces.
+
+  #I want to create a possibilities array with elements 1-9. These are the possible numbers that can go into the empty space.
+
+  #Question: do my arrays need to be composed of integers? Why? How will the puzzle be input my program? As a string? Is there a rule about this? If there is, why and how.
+
+  #I have my two arrays: puzzle_array and possibilities_array. Every number that is currently in the puzzle array, by the rules of the game, cannot also be part of the possibilities array. Iterate through each element in the puzzle_array and check it against each element in the possibilities_array. For any numbers in the puzzle_array.... reject each number in the possibili has a number in it, that eliminates that number as a possible solution to the 
+
+  #Do you want to check for duplicates? Do you want to make sure that the puzzle you're inputting does not have any of the same numbers? That is certainly one of the rules of sudoku. 
+
+  # so that I can check each element of the puzzle_array against the possibilities_array. For any input that is found in the possibilities array, I will delete it.
+
+  #create an array with the puzzle () and an array with the possibilities. then i want to check each input in the input_array against the possbilities in the possibilities_array. when there is an input that matches a possibility, I want it to delete 
