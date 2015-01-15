@@ -1,0 +1,82 @@
+
+array_of_rows[0][0..2]array_of_rows[1][0..2]
+array_of_rows[2][0..2]
+
+
+[array_of_rows[0][0..2], array_of_rows[1][0..2], array_of_rows[2][0..2].zip
+
+OR 
+
+blah.zip(array_of_rows[0[0..2]], array_of_rows[1[0..2]], array_of_rows[2[0..2])
+
+
+......................
+array_of_rows.shift = removes the first array in the array of rows:
+        [0] 7,
+        [1] 0,
+        [2] 5,
+        [3] 6,
+        [4] 3,
+        [5] 8,
+        [6] 9,
+        [7] 4,
+        [8] 2 
+.......................
+array_of_rows[1].shift = 1
+array_of_rows[1].shift = 6
+array_of_rows[1].shift = 3
+..........................
+(0..3).each do |row_num|
+  array_of_squares << array_of_rows[row_num].shift(3)
+end
+
+........................................................
+
+Notes for Square Builder
+
+Example used to figure out wtf shift is doing:
+
+array_of_arrays = [["a", "b", "c", "d", "e"], [ 1, 2, 3, 4, 5], ["1a", "1b", "1c", "1d", "1e"]]
+
+(0..2).each do |row_num|
+  new_array << array_of_arrays[row_num].shift(3)
+end
+
+should return: 
+
+new_array =
+["a", 1, "1a"]
+["b", 2, "1b"]
+["c", 3, "1c"]
+
+
+array_of_arrays =
+["d", "e"]
+[4, 5]
+["1d", "1e"]
+
+Actual code I want to use for my square builder: 
+
+Array of rows looks like this: 
++[[0, 2, 6, 5, 9, 4, 3, 1, 7], [7, 0, 5, 6, 3, 8, 9, 4, 2], [3, 9, 0, 7, 2, 1, 8, 6, 5], [1, 6, 3, 0, 5, 9, 2, 7, 8], [9, 4, 8, 2, 0, 7, 1, 5, 3], [2, 5, 7, 8, 1, 0, 6, 9, 4], [5, 3, 1, 9, 0, 2, 0, 8, 6], [4, 8, 2, 1, 7, 6, 5, 0, 9], [6, 7, 9, 3, 8, 5, 4, 2, 0]]    
+
+(0..2).each do |row_num|
+  array_of_squares << array_of_rows[row_num].shift(3)
+end
+
+
+# Array_of_rows looks like this: 
+# +[[0, 2, 6, 5, 9, 4, 3, 1, 7], 
+#   [7, 0, 5, 6, 3, 8, 9, 4, 2], 
+#   [3, 9, 0, 7, 2, 1, 8, 6, 5], 
+#   [1, 6, 3, 0, 5, 9, 2, 7, 8], 
+#   [9, 4, 8, 2, 0, 7, 1, 5, 3], 
+#   [2, 5, 7, 8, 1, 0, 6, 9, 4], 
+#   [5, 3, 1, 9, 0, 2, 0, 8, 6], 
+#   [4, 8, 2, 1, 7, 6, 5, 0, 9], 
+#   [6, 7, 9, 3, 8, 5, 4, 2, 0]]    
+
+.........................................................
+      
+
+
