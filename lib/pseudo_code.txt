@@ -1,5 +1,0 @@
-  #Q: what's the best way to organize my puzzle files? first_puzzle is a row. second_puzzle is a column. third puzzle is a square.
-
-  #I want to accept a puzzle into my program. the puzzle will have 9 elements total with 1 missing element that you want to solve for. the goal is to solve for the missing piece.
-
-  #I need a solver class with a solve method.
