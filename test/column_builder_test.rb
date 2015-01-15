@@ -1,3 +1,4 @@
+require 'pry'
 require 'minitest/autorun'
 require_relative '../lib/column_builder'
 require_relative '../lib/board_parser'
